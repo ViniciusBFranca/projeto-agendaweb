@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda Web - Painel Administrativo</title>
+
+    <link rel="stylesheet" href="./css/admin.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>📅 Agenda Web</h1>
+
+    <p>Painel Administrativo</p>
+
+</header>
+
+<main class="container">
+
+<a href="index.html" class="voltar">
+
+← Voltar
+
+</a>
+
+<section class="cards-dashboard">
+
+    <div class="card-info">
+
+        <h3>Total</h3>
+
+        <span id="total">0</span>
+
+    </div>
+
+    <div class="card-info">
+
+        <h3>Agendados</h3>
+
+        <span id="agendados">0</span>
+
+    </div>
+
+    <div class="card-info">
+
+        <h3>Confirmados</h3>
+
+        <span id="confirmados">0</span>
+
+    </div>
+
+    <div class="card-info">
+
+        <h3>Concluídos</h3>
+
+        <span id="concluidos">0</span>
+
+    </div>
+
+    <div class="card-info">
+
+        <h3>Cancelados</h3>
+
+        <span id="cancelados">0</span>
+
+    </div>
+
+</section>
+
+<section class="filtro">
+
+<label>
+
+Filtrar por data
+
+</label>
+
+<input
+type="date"
+id="filtroData">
+
+</section>
+
+<section class="tabela-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Cliente</th>
+
+<th>Telefone</th>
+
+<th>Serviço</th>
+
+<th>Data</th>
+
+<th>Hora</th>
+
+<th>Status</th>
+
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody id="listaAgendamentos">
+
+</tbody>
+
+</table>
+
+</section>
+
+<div id="semAgendamentos" class="vazio">
+
+<h2>
+
+Nenhum agendamento encontrado
+
+</h2>
+
+</div>
+
+</main>
+
+<script src="./js/storage.js"></script>
+
+<script src="./js/utils.js"></script>
+
+<script src="./js/admin.js"></script>
+
+</body>
+
+</html>
