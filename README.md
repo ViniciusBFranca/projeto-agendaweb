@@ -12,7 +12,7 @@ A aplicação permite que clientes realizem agendamentos de serviços e que admi
 (Adicionar link após publicação)
 
 🔗 Repositório:
-(Adicionar link do GitHub)
+https://github.com/ViniciusBFranca/projeto-agendaweb
 
 ---
 
