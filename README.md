@@ -4,17 +4,6 @@ Sistema simples de agendamento de serviços desenvolvido como desafio técnico p
 
 A aplicação permite que clientes realizem agendamentos de serviços e que administradores gerenciem os atendimentos através de um painel administrativo.
 
----
-
-# 🚀 Demonstração
-
-🔗 Deploy:
-(Adicionar link após publicação)
-
-🔗 Repositório:
-
-
----
 
 # 📌 Funcionalidades
 
@@ -69,30 +58,6 @@ A aplicação permite que clientes realizem agendamentos de serviços e que admi
 
 ---
 
-# 📂 Estrutura do projeto
-
-```
-agenda-web/
-
-│
-├── index.html
-├── cliente.html
-├── admin.html
-│
-├── css/
-│   ├── style.css
-│   └── admin.css
-│
-├── js/
-│   ├── storage.js
-│   ├── utils.js
-│   ├── app.js
-│   └── admin.js
-│
-└── README.md
-```
-
----
 
 # 💡 Decisões técnicas
 
@@ -123,39 +88,6 @@ As implementações foram revisadas e compreendidas durante o desenvolvimento do
 
 ---
 
-# ▶️ Como executar o projeto localmente
-
-## 1. Clone o repositório
-
-```bash
-git clone URL_DO_REPOSITORIO
-```
-
-## 2. Acesse a pasta do projeto
-
-```bash
-cd agenda-web
-```
-
-## 3. Execute o projeto
-
-Como o projeto utiliza apenas HTML, CSS e JavaScript, basta abrir o arquivo:
-
-```
-index.html
-```
-
-no navegador.
-
-Também é possível utilizar extensões como:
-
-```
-Live Server
-```
-
-no Visual Studio Code para executar localmente.
-
----
 
 # 🔐 Credenciais de acesso
 
