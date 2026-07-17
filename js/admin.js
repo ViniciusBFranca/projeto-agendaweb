@@ -1,5 +1,4 @@
 const tabela = document.getElementById("listaAgendamentos");
-
 const filtroData = document.getElementById("filtroData");
 
 const semAgendamentos = document.getElementById("semAgendamentos");
@@ -21,7 +20,7 @@ const cancelados = document.getElementById("cancelados");
 
 
 
-function carregarDashboard(lista){
+function carregarDashboard(lista) {
 
 
     total.textContent = lista.length;
@@ -62,7 +61,7 @@ function carregarDashboard(lista){
 
 
 
-function carregarAgendamentos(){
+function carregarAgendamentos() {
 
 
     const todos = buscarAgendamentos();
@@ -78,7 +77,7 @@ function carregarAgendamentos(){
 
     // filtro por data
 
-    if(filtroData.value !== ""){
+    if (filtroData.value !== "") {
 
 
         lista = todos.filter(item =>
@@ -96,7 +95,7 @@ function carregarAgendamentos(){
 
 
 
-    if(lista.length === 0){
+    if (lista.length === 0) {
 
 
         tabelaContainer.style.display = "none";
@@ -120,10 +119,10 @@ function carregarAgendamentos(){
 
     // organiza por data e horário
 
-    lista.sort((a,b)=>{
+    lista.sort((a, b) => {
 
 
-        if(a.data === b.data){
+        if (a.data === b.data) {
 
             return a.horario.localeCompare(b.horario);
 
@@ -139,7 +138,7 @@ function carregarAgendamentos(){
 
 
 
-    lista.forEach(item=>{
+    lista.forEach(item => {
 
 
         tabela.innerHTML += `
@@ -271,10 +270,10 @@ function carregarAgendamentos(){
 
 
 
-function alterarStatus(id,status){
+function alterarStatus(id, status) {
 
 
-    atualizarAgendamento(id,{
+    atualizarAgendamento(id, {
 
         status
 
@@ -291,7 +290,7 @@ function alterarStatus(id,status){
 
 
 
-function removerAgendamento(id){
+function removerAgendamento(id) {
 
 
 
@@ -303,7 +302,7 @@ function removerAgendamento(id){
 
 
 
-    if(!confirmar){
+    if (!confirmar) {
 
         return;
 
