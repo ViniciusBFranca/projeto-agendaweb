@@ -1,9 +1,39 @@
 # 📅 Agenda Web
 
-Sistema simples de agendamento de serviços desenvolvido como desafio técnico para processo seletivo de Desenvolvedor Júnior.
+Sistema simples de agendamento de serviços desenvolvido como desafio técnico de Desenvolvedor Júnior.
 
 A aplicação permite que clientes realizem agendamentos de serviços e que administradores gerenciem os atendimentos através de um painel administrativo.
 
+📸 Demonstração
+
+
+🏠 Página Inicial
+
+<img width="1368" height="772" alt="agenda-web" src="https://github.com/user-attachments/assets/fb645975-01a5-43ec-88bb-edd6c1cdaabc" />
+
+
+✂️ Área do Cliente
+
+<img width="1368" height="772" alt="cliente-web" src="https://github.com/user-attachments/assets/ccb5cff7-47fc-471c-90b2-0d7c2c042076" />
+
+
+
+📊 Painel Administrativo
+
+<img width="1368" height="772" alt="admin-web" src="https://github.com/user-attachments/assets/d516e7f2-938a-4b45-8690-8ab01f1bfdb8" />
+
+
+
+📱 Versão Responsiva
+
+
+<img width="216" height="466" alt="agenda-resp" src="https://github.com/user-attachments/assets/893c4698-6eaf-4baf-a433-3ba4aa72dcae"/>
+
+<img width="216" height="465" alt="clinte-resp" src="https://github.com/user-attachments/assets/62c56666-0b49-4b94-ba98-bd505954fab3" />
+
+<img width="216" height="466" alt="admin-resp1" src="https://github.com/user-attachments/assets/c8ce9707-c1da-448f-9d82-090822cf3223" />
+
+<img width="216" height="467" alt="admin-resp2" src="https://github.com/user-attachments/assets/5727bda4-1b74-436d-9eb8-a859c24a6883" />
 
 # 📌 Funcionalidades
 
