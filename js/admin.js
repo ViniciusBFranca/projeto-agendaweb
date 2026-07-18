@@ -7,22 +7,16 @@ const tabelaContainer = document.querySelector(".tabela-container");
 // Cards do dashboard
 
 const total = document.getElementById("total");
-
 const agendados = document.getElementById("agendados");
-
 const confirmados = document.getElementById("confirmados");
-
 const concluidos = document.getElementById("concluidos");
-
 const cancelados = document.getElementById("cancelados");
-
 
 
 function carregarDashboard(lista) {
 
 
     total.textContent = lista.length;
-
 
     agendados.textContent = lista.filter(item =>
 
@@ -31,13 +25,10 @@ function carregarDashboard(lista) {
     ).length;
 
 
-
     confirmados.textContent = lista.filter(item =>
 
         item.status === "Confirmado"
-
     ).length;
-
 
 
     concluidos.textContent = lista.filter(item =>
@@ -47,16 +38,13 @@ function carregarDashboard(lista) {
     ).length;
 
 
-
     cancelados.textContent = lista.filter(item =>
 
         item.status === "Cancelado"
 
     ).length;
 
-
 }
-
 
 
 function carregarAgendamentos() {
@@ -64,82 +52,58 @@ function carregarAgendamentos() {
 
     const todos = buscarAgendamentos();
 
-
     carregarDashboard(todos);
-
-
 
     let lista = todos;
 
 
-    
-
     if (filtroData.value !== "") {
-
 
         lista = todos.filter(item =>
 
             item.data === filtroData.value
-
         );
-
 
     }
 
 
-
     tabela.innerHTML = "";
-
 
 
     if (lista.length === 0) {
 
 
         tabelaContainer.style.display = "none";
-
+        
         semAgendamentos.style.display = "block";
-
 
         return;
 
-
     }
-
-
 
     tabelaContainer.style.display = "block";
 
     semAgendamentos.style.display = "none";
 
 
-
-
     lista.sort((a, b) => {
 
 
         if (a.data === b.data) {
-
             return a.horario.localeCompare(b.horario);
 
         }
 
-
         return a.data.localeCompare(b.data);
-
 
     });
 
 
-
-
-
     lista.forEach(item => {
-
 
         tabela.innerHTML += `
 
         <tr>
-
 
             <td>
 
@@ -147,13 +111,11 @@ function carregarAgendamentos() {
 
             </td>
 
-
             <td>
 
                 ${item.telefone}
 
             </td>
-
 
 
             <td>
@@ -163,13 +125,11 @@ function carregarAgendamentos() {
             </td>
 
 
-
             <td>
 
                 ${formatarData(item.data)}
 
             </td>
-
 
 
             <td>
@@ -179,9 +139,7 @@ function carregarAgendamentos() {
             </td>
 
 
-
             <td>
-
 
                 <select onchange="alterarStatus(${item.id}, this.value)">
 

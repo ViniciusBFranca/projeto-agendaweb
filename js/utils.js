@@ -8,10 +8,9 @@
 // GERAR ID ÚNICO
 // ============================
 
-function gerarId(){
+function gerarId() {
 
     return Date.now();
-
 }
 
 
@@ -22,23 +21,17 @@ function gerarId(){
 // Para: 20/07/2026
 // ============================
 
-function formatarData(data){
-
+function formatarData(data) {
 
     const partes = data.split("-");
 
-
     return `${partes[2]}/${partes[1]}/${partes[0]}`;
-
-
 }
-
 
 
 // ============================
 // HORÁRIOS DISPONÍVEIS
 // ============================
-
 
 const horariosPadrao = [
 
@@ -55,70 +48,47 @@ const horariosPadrao = [
     "15:00",
 
     "16:00"
-
 ];
 
 
 
-
-
-function horariosDisponiveis(data){
-
+function horariosDisponiveis(data) {
 
     const agendamentos = buscarAgendamentos();
-
-
 
     const horariosOcupados = agendamentos
 
         .filter(item =>
 
             item.data === data &&
-
             item.status !== "Cancelado"
-
         )
 
         .map(item => item.horario);
 
 
-
-
-
     return horariosPadrao.filter(horario =>
 
         !horariosOcupados.includes(horario)
-
     );
 
-
 }
-
-
 
 // ============================
 // VERIFICAR HORÁRIO
 // ============================
 
 
-function horarioDisponivel(data, horario){
-
+function horarioDisponivel(data, horario) {
 
     const agendamentos = buscarAgendamentos();
-
-
 
     return !agendamentos.some(item =>
 
 
         item.data === data &&
-
         item.horario === horario &&
-
         item.status !== "Cancelado"
-
-
     );
-
 
 }
