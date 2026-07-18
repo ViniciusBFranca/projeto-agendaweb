@@ -1,8 +1,6 @@
 const tabela = document.getElementById("listaAgendamentos");
 const filtroData = document.getElementById("filtroData");
-
 const semAgendamentos = document.getElementById("semAgendamentos");
-
 const tabelaContainer = document.querySelector(".tabela-container");
 
 
@@ -74,8 +72,7 @@ function carregarAgendamentos() {
     let lista = todos;
 
 
-
-    // filtro por data
+    
 
     if (filtroData.value !== "") {
 
@@ -116,8 +113,6 @@ function carregarAgendamentos() {
 
 
 
-
-    // organiza por data e horário
 
     lista.sort((a, b) => {
 
@@ -254,7 +249,6 @@ function carregarAgendamentos() {
             </td>
 
 
-
         </tr>
 
 
@@ -317,10 +311,7 @@ function removerAgendamento(id) {
     carregarAgendamentos();
 
 
-
 }
-
-
 
 
 filtroData.addEventListener(

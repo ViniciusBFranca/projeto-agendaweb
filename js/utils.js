@@ -16,7 +16,6 @@ function gerarId(){
 
 
 
-
 // ============================
 // FORMATAR DATA
 // De: 2026-07-20
@@ -33,8 +32,6 @@ function formatarData(data){
 
 
 }
-
-
 
 
 
@@ -96,10 +93,6 @@ function horariosDisponiveis(data){
 
 
 }
-
-
-
-
 
 
 

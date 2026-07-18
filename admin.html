@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png">
     <title>Agenda Web - Painel Administrativo</title>
 
     <link rel="stylesheet" href="./css/admin.css">
@@ -15,131 +16,129 @@
 
 <body>
 
-<header>
+    <header>
 
-    <h1>📅 Agenda Web</h1>
+        <h1>📅 Agenda Web</h1>
 
-    <p>Painel Administrativo</p>
+        <p>Painel Administrativo</p>
 
-</header>
+    </header>
 
-<main class="container">
+    <main class="container">
 
-<a href="index.html" class="voltar">
+        <a href="index.html" class="voltar">
 
-← Voltar
+            ← Voltar
 
-</a>
+        </a>
 
-<section class="cards-dashboard">
+        <section class="cards-dashboard">
 
-    <div class="card-info total">
+            <div class="card-info total">
 
-    <h3>Total</h3>
+                <h3>Total</h3>
 
-    <span id="total">0</span>
+                <span id="total">0</span>
 
-</div>
+            </div>
 
-   <div class="card-info agendados">
+            <div class="card-info agendados">
 
-        <h3>Agendados</h3>
+                <h3>Agendados</h3>
 
-        <span id="agendados">0</span>
+                <span id="agendados">0</span>
 
-    </div>
+            </div>
 
-    <div class="card-info confirmados">
+            <div class="card-info confirmados">
 
-        <h3>Confirmados</h3>
+                <h3>Confirmados</h3>
 
-        <span id="confirmados">0</span>
+                <span id="confirmados">0</span>
 
-    </div>
+            </div>
 
-    <div class="card-info concluidos">
+            <div class="card-info concluidos">
 
-        <h3>Concluídos</h3>
+                <h3>Concluídos</h3>
 
-        <span id="concluidos">0</span>
+                <span id="concluidos">0</span>
 
-    </div>
+            </div>
 
-    <div class="card-info cancelados">
+            <div class="card-info cancelados">
 
-        <h3>Cancelados</h3>
+                <h3>Cancelados</h3>
 
-        <span id="cancelados">0</span>
+                <span id="cancelados">0</span>
 
-    </div>
+            </div>
 
-</section>
+        </section>
 
-<section class="filtro">
+        <section class="filtro">
 
-<label>
+            <label>
 
-Filtrar por data
+                Filtrar por data
 
-</label>
+            </label>
 
-<input
-type="date"
-id="filtroData">
+            <input type="date" id="filtroData">
 
-</section>
+        </section>
 
-<section class="tabela-container">
+        <section class="tabela-container">
 
-<table>
+            <table>
 
-<thead>
+                <thead>
 
-<tr>
+                    <tr>
 
-<th>Cliente</th>
+                        <th>Cliente</th>
 
-<th>Telefone</th>
+                        <th>Telefone</th>
 
-<th>Serviço</th>
+                        <th>Serviço</th>
 
-<th>Data</th>
+                        <th>Data</th>
 
-<th>Hora</th>
+                        <th>Hora</th>
 
-<th>Status</th>
+                        <th>Status</th>
 
-<th>Ações</th>
+                        <th>Ações</th>
 
-</tr>
+                    </tr>
 
-</thead>
+                </thead>
 
-<tbody id="listaAgendamentos">
+                <tbody id="listaAgendamentos">
 
-</tbody>
+                </tbody>
 
-</table>
+            </table>
 
-</section>
+        </section>
 
-<div id="semAgendamentos" class="vazio">
+        <div id="semAgendamentos" class="vazio">
 
-<h2>
+            <h2>
 
-Nenhum agendamento encontrado
+                Nenhum agendamento encontrado
 
-</h2>
+            </h2>
 
-</div>
+        </div>
 
-</main>
+    </main>
 
-<script src="./js/storage.js"></script>
+    <script src="./js/storage.js"></script>
 
-<script src="./js/utils.js"></script>
+    <script src="./js/utils.js"></script>
 
-<script src="./js/admin.js"></script>
+    <script src="./js/admin.js"></script>
 
 </body>
 

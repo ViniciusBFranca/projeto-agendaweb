@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png">
 
     <title>Agenda Web - Cliente</title>
 
@@ -15,131 +17,113 @@
 
 <body>
 
-<header>
+    <header>
 
-    <h1>📅 Agenda Web</h1>
+        <h1>📅 Agenda Web</h1>
 
-    <p>Agendamento de Serviços</p>
+        <p>Agendamento de Serviços</p>
 
-</header>
+    </header>
 
-<main class="container">
+    <main class="container">
 
-    <a href="index.html" class="voltar">
+        <a href="index.html" class="voltar">
 
-        ← Voltar para o início
+            ← Voltar para o início
 
-    </a>
+        </a>
 
-    <section class="card">
+        <section class="card">
 
-        <h2>Novo Agendamento</h2>
+            <h2>Novo Agendamento</h2>
 
-        <form id="formAgendamento">
-
-            <div class="campo">
-
-                <label>Nome</label>
-
-                <input
-                    type="text"
-                    id="nome"
-                    placeholder="Digite seu nome"
-                    required>
-
-            </div>
-
-            <div class="campo">
-
-                <label>Telefone</label>
-
-                <input
-                    type="tel"
-                    id="telefone"
-                    maxlength="15"
-                    placeholder="(11) 99999-9999"
-                    required>
-
-            </div>
-
-            <div class="campo">
-
-                <label>Serviço</label>
-
-                <select id="servico" required>
-
-                    <option value="">Selecione</option>
-
-                    <option>Corte de Cabelo</option>
-
-                    <option>Barba</option>
-
-                    <option>Corte + Barba</option>
-
-                    <option>Sobrancelha</option>
-
-                </select>
-
-            </div>
-
-            <div class="linha">
+            <form id="formAgendamento">
 
                 <div class="campo">
 
-                    <label>Data</label>
+                    <label>Nome</label>
 
-                    <input
-                        type="date"
-                        id="data"
-                        required>
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
 
                 </div>
 
                 <div class="campo">
 
-                    <label>Horário</label>
+                    <label>Telefone</label>
 
-                    <select id="horario" required>
+                    <input type="tel" id="telefone" maxlength="15" placeholder="(11) 99999-9999" required>
 
-                        <option value="">
+                </div>
 
-                            Selecione uma data
+                <div class="campo">
 
-                        </option>
+                    <label>Serviço</label>
+
+                    <select id="servico" required>
+
+                        <option value="">Selecione</option>
+
+                        <option>Corte de Cabelo</option>
+
+                        <option>Barba</option>
+
+                        <option>Corte + Barba</option>
+
+                        <option>Sobrancelha</option>
 
                     </select>
 
                 </div>
 
-            </div>
+                <div class="linha">
 
-            <button type="submit">
+                    <div class="campo">
 
-                Agendar Serviço
+                        <label>Data</label>
 
-            </button>
+                        <input type="date" id="data" required>
 
-        </form>
+                    </div>
 
-    </section>
+                    <div class="campo">
 
-    <section id="mensagem">
+                        <label>Horário</label>
 
-    </section>
+                        <select id="horario" required>
 
-</main>
+                            <option value="">
 
-<footer>
+                                Selecione uma data
 
-    Agenda Web © 2026
+                            </option>
+                        </select>
+                    </div>
+                </div>
 
-</footer>
+                <button type="submit">
 
-<script src="./js/storage.js"></script>
+                    Agendar Serviço
 
-<script src="./js/utils.js"></script>
+                </button>
 
-<script src="./js/app.js"></script>
+            </form>
+        </section>
+
+        <section id="mensagem">
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        Agenda Web © 2026
+
+    </footer>
+
+    <script src="./js/storage.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/app.js"></script>
 
 </body>
 

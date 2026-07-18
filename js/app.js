@@ -1,13 +1,8 @@
 const formulario = document.getElementById("formAgendamento");
-
 const mensagem = document.getElementById("mensagem");
-
 const campoData = document.getElementById("data");
-
 const campoHorario = document.getElementById("horario");
-
 const campoTelefone = document.getElementById("telefone");
-
 
 
 // ============================
@@ -29,11 +24,11 @@ campoData.min = hoje;
 // ============================
 
 
-campoTelefone.addEventListener("input",()=>{
+campoTelefone.addEventListener("input", () => {
 
 
     let valor = campoTelefone.value
-        .replace(/\D/g,"");
+        .replace(/\D/g, "");
 
 
     valor = valor.replace(
@@ -54,14 +49,12 @@ campoTelefone.addEventListener("input",()=>{
 });
 
 
-
-
 // ============================
 // CARREGAR HORÁRIOS
 // ============================
 
 
-campoData.addEventListener("change",()=>{
+campoData.addEventListener("change", () => {
 
 
     const horarios = horariosDisponiveis(
@@ -73,7 +66,7 @@ campoData.addEventListener("change",()=>{
 
 
 
-    if(horarios.length === 0){
+    if (horarios.length === 0) {
 
 
         campoHorario.innerHTML = `
@@ -107,7 +100,7 @@ campoData.addEventListener("change",()=>{
 
 
 
-    horarios.forEach(horario=>{
+    horarios.forEach(horario => {
 
 
         campoHorario.innerHTML += `
@@ -129,135 +122,132 @@ campoData.addEventListener("change",()=>{
 
 
 
-
-
-
 // ============================
 // ENVIAR FORMULÁRIO
 // ============================
 
 
 formulario.addEventListener(
-"submit",
-(event)=>{
+    "submit",
+    (event) => {
 
 
-    event.preventDefault();
-
-
-
-
-    const nome =
-    document.getElementById("nome")
-    .value
-    .trim();
-
-
-
-    const telefone =
-    campoTelefone.value.trim();
-
-
-
-    const servico =
-    document.getElementById("servico")
-    .value;
-
-
-
-    const data =
-    campoData.value;
-
-
-
-    const horario =
-    campoHorario.value;
+        event.preventDefault();
 
 
 
 
-    if(
-        nome === "" ||
-        telefone === "" ||
-        servico === "" ||
-        data === "" ||
-        horario === ""
-    ){
+        const nome =
+            document.getElementById("nome")
+                .value
+                .trim();
 
 
-        alert(
-            "Preencha todos os campos."
+
+        const telefone =
+            campoTelefone.value.trim();
+
+
+
+        const servico =
+            document.getElementById("servico")
+                .value;
+
+
+
+        const data =
+            campoData.value;
+
+
+
+        const horario =
+            campoHorario.value;
+
+
+
+
+        if (
+            nome === "" ||
+            telefone === "" ||
+            servico === "" ||
+            data === "" ||
+            horario === ""
+        ) {
+
+
+            alert(
+                "Preencha todos os campos."
+            );
+
+
+            return;
+
+
+        }
+
+
+
+
+
+        if (!horarioDisponivel(
+            data,
+            horario
+        )) {
+
+
+            alert(
+                "Este horário já está ocupado."
+            );
+
+
+            return;
+
+
+        }
+
+
+
+
+        const novoAgendamento = {
+
+
+            id: gerarId(),
+
+
+            nome,
+
+
+            telefone,
+
+
+            servico,
+
+
+            data,
+
+
+            horario,
+
+
+            status: "Agendado"
+
+
+
+        };
+
+
+
+
+
+        adicionarAgendamento(
+            novoAgendamento
         );
 
 
-        return;
-
-
-    }
 
 
 
-
-
-    if(!horarioDisponivel(
-        data,
-        horario
-    )){
-
-
-        alert(
-            "Este horário já está ocupado."
-        );
-
-
-        return;
-
-
-    }
-
-
-
-
-    const novoAgendamento = {
-
-
-        id: gerarId(),
-
-
-        nome,
-
-
-        telefone,
-
-
-        servico,
-
-
-        data,
-
-
-        horario,
-
-
-        status:"Agendado"
-
-
-
-    };
-
-
-
-
-
-    adicionarAgendamento(
-        novoAgendamento
-    );
-
-
-
-
-
-    mensagem.innerHTML = `
+        mensagem.innerHTML = `
 
     <div class="sucesso">
 
@@ -310,16 +300,15 @@ formulario.addEventListener(
 
     </div>
 
-
-    `;
-
+ `;
 
 
 
-    formulario.reset();
+
+        formulario.reset();
 
 
-    campoHorario.innerHTML = `
+        campoHorario.innerHTML = `
 
     <option>
 
@@ -330,4 +319,4 @@ formulario.addEventListener(
     `;
 
 
-});
+    });

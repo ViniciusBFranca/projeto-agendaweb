@@ -19,8 +19,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 45px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+    border-bottom: 3px solid rgba(212, 175, 55, .20);
     position: relative;
     overflow: hidden;
 
@@ -126,7 +125,7 @@ header p {
 
     width: 90%;
     max-width: 850px;
-    margin:50px auto;
+    margin: 50px auto;
 }
 
 .card {
@@ -317,6 +316,10 @@ footer {
 
         width: 100%;
     }
+
+    .sucesso {
+        background: linear-gradient(135deg, #1A1A1D, #25252A, #2F2F35);
+    }
 }
 
 .card-home h2 i {
@@ -327,22 +330,22 @@ footer {
 
 }
 
-.container{
+.container {
 
-    animation:aparecer .6s ease;
+    animation: aparecer .6s ease;
 }
 
 
-@keyframes aparecer{
+@keyframes aparecer {
 
-    from{
-        opacity:0;
-        transform:translateY(15px);
+    from {
+        opacity: 0;
+        transform: translateY(15px);
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 
 }
