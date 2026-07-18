@@ -260,8 +260,8 @@ button:active {
 .sucesso {
 
     margin-top: 30px;
-    background: #ecfdf5;
-    border-left: 6px solid #22c55e;
+    background: linear-gradient(135deg, #1A1A1D, #25252A, #2F2F35);
+    border-left: 6px solid #D4AF37;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, .06);
